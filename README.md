@@ -39,10 +39,15 @@ flowchart LR
 sequenceDiagram
     actor 太郎
     actor 花子
+    actor 殺子
     太郎->>花子: おはよう！
     activate 花子
     花子-->>太郎: おはようございます!
     deactivate 花子
+    花子->>殺子:おはよう！
+    active 殺子
+    殺子-->>花子: お前を殺す。
+    deactivate 殺子
 ```
 
 ## クラス図
