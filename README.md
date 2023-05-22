@@ -19,7 +19,12 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart LR;
-  A --> B
+  A[/開始/] --> B([敵発見]);
+  B --> C([行動]);
+  C -- 逃げる --> D[[逃げ切れなかった]];
+  D --> B;
+  C -- 戦闘 -->E{勝利};
+  E --> F([帰宅]);
 ```
 
 ## シーケンス図
@@ -34,10 +39,22 @@ flowchart LR;
 sequenceDiagram
     actor 太郎
     actor 花子
+    actor よしみ
     太郎->>花子: おはよう！
     activate 花子
     花子-->>太郎: おはようございます!
     deactivate 花子
+    よしみ->>花子 :How are you today?
+    よしみ->>太郎 :How are you today?
+    loop エラー
+    よしみ->>よしみ:私は誰？
+    end
+    activate　花子
+    activate　太郎
+    花子->>よしみ:私は元気です。ありがとう。
+    太郎->>よしみ:僕は病気だよ。皆勤賞貰いたいからきたよ。
+    deactivate　花子
+    deactivate　太郎
 ```
 
 ## クラス図
@@ -51,4 +68,7 @@ sequenceDiagram
 ```mermaid
 classDiagram
     キャラクター o-- アイテム
+    アイテム o-- ソード
+    アイテム o-- 弓
+    キャラクター--敵
 ```
