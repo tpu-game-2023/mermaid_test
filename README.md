@@ -44,6 +44,10 @@ sequenceDiagram
     activate 花子
     花子-->>太郎: おはようございます!
     deactivate 花子
+    花子->>よしみ :How are you today?
+    activate　花子
+    activate　太郎
+    
 ```
 
 ## クラス図
