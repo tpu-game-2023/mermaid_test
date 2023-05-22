@@ -44,7 +44,8 @@ sequenceDiagram
     activate 花子
     花子-->>太郎: おはようございます!
     deactivate 花子
-    よしみ->>花子,太郎 :How are you today?
+    よしみ->>花子 :How are you today?
+    よしみ->>太郎 :How are you today?
     activate　花子
     activate　太郎
     
