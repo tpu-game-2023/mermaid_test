@@ -45,7 +45,7 @@ sequenceDiagram
     花子-->>太郎: おはようございます!
     deactivate 花子
     花子->>殺子:おはよう！
-    active 殺子
+    activate 殺子
     殺子-->>花子: お前を殺す。
     deactivate 殺子
 ```
