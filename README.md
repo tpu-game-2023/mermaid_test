@@ -66,5 +66,5 @@ sequenceDiagram
 classDiagram
     キャラクター o-- アイテム
     アイテム o-- ソード
-    ソード..弓
+    アイテム o-- 弓
 ```
