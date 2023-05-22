@@ -65,5 +65,6 @@ sequenceDiagram
 ```mermaid
 classDiagram
     キャラクター o-- アイテム
-    キャラクター o-- ソード
+    アイテム o-- ソード
+    ソード..弓
 ```
