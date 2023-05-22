@@ -39,9 +39,10 @@ flowchart LR;
 sequenceDiagram
     actor 太郎
     actor 花子
+    actor よしみ
     太郎->>花子: おはよう！
-    activate よしみ
-    よしみ-->>太郎: おはようございます!
+    activate 花子
+    花子-->>太郎: おはようございます!
     deactivate 花子
 ```
 
