@@ -48,7 +48,10 @@ sequenceDiagram
     よしみ->>太郎 :How are you today?
     activate　花子
     activate　太郎
-    
+    花子->>よしみ:私は元気です。ありがとう。
+    太郎->>よしみ:僕は病気だよ。皆勤賞貰いたいからきたよ。
+    deactivate　花子
+    deactivate　太郎
 ```
 
 ## クラス図
