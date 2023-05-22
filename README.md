@@ -68,5 +68,5 @@ classDiagram
     アイテム o-- ソード
     アイテム o-- 弓
     flowchart LR;
-    キャラクター--敵
+    キャラクター敵
 ```
