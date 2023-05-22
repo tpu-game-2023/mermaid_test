@@ -46,6 +46,9 @@ sequenceDiagram
     deactivate 花子
     よしみ->>花子 :How are you today?
     よしみ->>太郎 :How are you today?
+    loop エラー
+    よしみ->>よしみ:私は誰？
+    end
     activate　花子
     activate　太郎
     花子->>よしみ:私は元気です。ありがとう。
