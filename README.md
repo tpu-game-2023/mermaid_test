@@ -19,7 +19,9 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart LR;
-  A --> B
+  A --> B --> C
+  C -->  A
+  C --> D --> E  
 ```
 
 ## シーケンス図
