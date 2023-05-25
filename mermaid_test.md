@@ -136,7 +136,7 @@ classDiagram
   student <|-- me
   game o-- student
   game o-- teacher
-  department o-- game
+  department <|-- game
   university o-- department
   
 ```
