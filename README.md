@@ -19,13 +19,13 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart UD;
-  id([START]) --> A
-  A --> id{B}
-  id{B} --> C
-  C --> D
-  D --> E
-  id{B} --> E
-  E --> id([END])
+  id([START]) --> A;
+  A --> id{B};
+  id{B} --> C;
+  C --> D;
+  D --> E;
+  id{B} --> E;
+  E --> id([END]);
 ```
 
 ## シーケンス図
