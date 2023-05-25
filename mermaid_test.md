@@ -70,7 +70,7 @@ sequenceDiagram
   human->>arduino: 電源を入れる
   arduino->>arduino: LEDピンを出力に設定する
   arduino->>arduino: 抵抗を繋いだピンを入力に設定する
-  alt "飽きてない"
+  alt 飽きてない
     human->>+R: 回転させる
     R-->>-human: 回転される
     loop 1クロック
@@ -80,7 +80,7 @@ sequenceDiagram
       arduino->>+LED: pwmを送る
       LED->>-human: デューティー比に応じて光る
     end
-  else "飽きた
+  else 飽きた
     human->>arduino: 電源を切る
   end
   
