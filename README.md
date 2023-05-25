@@ -18,13 +18,14 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart TD;
+flowchart LR;
   id([START]) --> A;
   A --> id{B};
+  id{B} --> E;
   id{B} --> C;
   C --> D;
   D --> E; 
-  id{B} --> E;
+ 
   E --> END;
 ```
 
