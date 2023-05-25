@@ -52,7 +52,6 @@ sequenceDiagram
     花子-->>田中: おはようございます!
     activate 田中
     田中-->田中: （眠い…）
-    deactivate 田中
     田中-->>花子: …おやすみ
     deactivate 田中
     
@@ -72,4 +71,6 @@ classDiagram
     キャラクター o-- アイテム
     キャラクター <|-- プレイヤー
     キャラクター <|-- 敵
+    敵 o-- ザコ
+    敵 o-- ボス
 ```
