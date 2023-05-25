@@ -69,6 +69,8 @@ sequenceDiagram
 ```mermaid
 classDiagram
     キャラクター o-- アイテム
+    アイテム <|-- 剣
+    アイテム <|-- 盾
     キャラクター <|-- プレイヤー
     キャラクター <|-- 敵
     敵 o-- ザコ
