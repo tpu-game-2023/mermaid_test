@@ -51,8 +51,8 @@ sequenceDiagram
     deactivate 田中
     花子-->>田中: おはようございます!
     activate 田中
-    田中-->>太郎: …おやすみ
-    deactivate 田中
+    田中-->>花子: …おやすみ
+
     
 
 ```
