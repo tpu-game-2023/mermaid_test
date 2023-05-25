@@ -22,9 +22,9 @@ flowchart UD;
   id([START]) --> A;
   A --> id{B};
   id{B} --> C;
-  C --> D;
-  D --> E;
   id{B} --> E;
+  C --> D;
+  D --> E; 
   E --> id([END]);
 ```
 
