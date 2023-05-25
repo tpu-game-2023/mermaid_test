@@ -1,10 +1,11 @@
-test marmaid
+test mermaid
 
 # 流れ図
+## 三目ならべの最善手
 
 ```mermaid
-flowchart LR;
-A --> B
+flowchart TD;
+A([開始]) --> B([終了])
 ```
 # シーケンス図
 
