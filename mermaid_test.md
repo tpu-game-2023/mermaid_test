@@ -88,3 +88,53 @@ sequenceDiagram
 
 
 # クラス図
+- 大学内の自分
+
+```mermaid
+classDiagram
+  class student {
+    -String name
+    -int age
+    -String gender
+    -int 学籍番号
+    +getName() String
+    +getAge() int
+    +getGender() String
+    +getStudentNumber() int
+  }
+  
+  class me {
+    
+  }
+  
+  class teacher {
+    -String name
+    -int age
+    -String gender
+    +getName() String
+    +getAge() int
+    +getGender() String
+  }
+  
+  class department {
+    -int studentNumber
+    +getNumber() int
+  }
+  
+  class game {
+    
+  }
+  
+  class university {
+    -int studentNumber
+    -String name
+    +getName() String
+  }
+  
+  student <|-- me
+  game o-- student
+  game o-- teacher
+  department o-- game
+  university o-- department
+  
+```
