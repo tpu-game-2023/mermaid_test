@@ -25,7 +25,7 @@ flowchart TD;
   id{B} --> E;
   C --> D;
   D --> E; 
-  E --> id([END]);
+  E --> ([END]);
 ```
 
 ## シーケンス図
