@@ -41,10 +41,38 @@ graph TB
 sequenceDiagram
     actor 太郎
     actor 花子
+    actor 三郎
     太郎->>花子: おはよう！
     activate 花子
     花子-->>太郎: おはようございます!
+    activate 三郎
+    花子->>三郎: こんにちは！
+    三郎-->>太郎: こんにちは！
+    activate 花子
+    花子-->>太郎: 今日の予定はありますか？
     deactivate 花子
+    activate 三郎
+    三郎-->>太郎: 何か予定があるのかな？
+    deactivate 三郎
+    activate 太郎
+    太郎-->>花子: はい、午後から会議があります。
+    deactivate 太郎
+    花子->>太郎: 分かりました。お仕事頑張ってください！
+    activate 太郎
+    太郎-->>花子: ありがとうございます！
+    deactivate 太郎
+    花子-->>三郎: 太郎さんは午後から会議があるそうです。
+    activate 三郎
+    三郎-->>花子: そうなんですね。お忙しいんですね。
+    deactivate 三郎
+    花子->>三郎: そうですね。今日は私も仕事が忙しいです。
+    activate 三郎
+    三郎-->>花子: 頑張ってください！
+    deactivate 三郎
+    花子-->>太郎: お互い頑張りましょうね！
+    activate 太郎
+    太郎-->>花子: はい、頑張りましょう！
+    deactivate 太郎
 ```
 
 ## クラス図
