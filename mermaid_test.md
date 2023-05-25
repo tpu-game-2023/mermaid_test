@@ -120,11 +120,9 @@ classDiagram
   
   class department {
     -int studentNumber
+    -String depatmentName
     +getNumber() int
-  }
-  
-  class game {
-    
+    +getName() String
   }
   
   class university {
@@ -133,10 +131,9 @@ classDiagram
     +getName() String
   }
   
-  student <|-- me
-  game o-- student
-  game o-- teacher
-  department <|-- game
-  university o-- department
+  student "1"<|--"1" me
+  department "1"o--"1..*" student
+  department "1"o--"1..*" teacher
+  university "1"o--"1..*" department
   
 ```
