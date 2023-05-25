@@ -54,8 +54,37 @@ end
 Q9 -- yes --> finish([終了])
 Q10 -- yes --> finish;
 ```
-# シーケンス図
 
+
+# シーケンス図
+- arduinoでボリューム抵抗を使いLEDの明るさを変更する
+
+```mermaid
+sequenceDiagram
+
+  actor human as 人
+  participant arduino
+  participant R as ボリューム抵抗
+  participant LED
+  
+  human->>arduino: 電源を入れる
+  arduino->>arduino: LEDピンを出力に設定する
+  arduino->>arduino: 抵抗を繋いだピンを入力に設定する
+  alt "飽きてない"
+    human->>+R: 回転させる
+    R-->>-human: 回転される
+    loop 1クロック
+      arduino->>+R: 電圧をかける
+      R-->>-arduino: 電圧を読み取る
+      arduino->>arduino: 出力用に値を変更する
+      arduino->>+LED: pwmを送る
+      LED->>-human: デューティー比に応じて光る
+    end
+  else "飽きた
+    human->>arduino: 電源を切る
+  end
+  
+```
 
 
 # クラス図
