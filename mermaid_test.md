@@ -1,7 +1,7 @@
 test mermaid
 
 # 流れ図
-## 三目ならべの最善手
+- 三目ならべの最善手
 
 ```mermaid
 flowchart TD;
