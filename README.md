@@ -71,7 +71,7 @@ classDiagram
 direction TD
 class キャラクター
     キャラクター: HP,攻撃力
-    キャラクター:  攻撃()
+    キャラクター: 　攻撃()
     class プレイヤー
     プレイヤー : FP
     キャラクター "1" o-- "1..*" アイテム
