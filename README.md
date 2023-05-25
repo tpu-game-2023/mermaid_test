@@ -20,6 +20,8 @@ Mermaidを触ってみよう
 ```mermaid
 flowchart LR;
    A([開始]) --> B[/技選択/];
+   B --> C[マッチ開始];
+   C --> D{コイン表裏確認};
    
 ```
 
