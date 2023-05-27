@@ -59,7 +59,6 @@ sequenceDiagram
     佐藤->高橋: 好きです!
     activate 高橋
     高橋-->>佐藤: おはようございます!
-    deactivate 高橋
 ```
 
 ## クラス図
