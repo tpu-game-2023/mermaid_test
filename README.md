@@ -51,6 +51,17 @@ sequenceDiagram
     deactivate 花子
 ```
 
+```mermaid
+sequenceDiagram
+    actor 佐藤
+    actor 高橋
+    actor 山田
+    佐藤->高橋: 好きです!
+    activate 高橋
+    高橋-->>佐藤: おはようございます!
+    deactivate 高橋
+```
+
 ## クラス図
 
 ### 条件
