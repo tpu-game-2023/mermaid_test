@@ -92,9 +92,9 @@ classDiagram
     +getNvalue() int
     }
     
-    Human o-- Mental
-    Mental <|-- Positive
-    Mental <|-- Negative
+    Human o-- Mental : 集約
+    Mental <|-- Positive : 継承
+    Mental <|-- Negative : 継承
     Negative <|-- A
     Negative <|-- B
     Negative <|-- C
