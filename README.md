@@ -40,12 +40,55 @@ flowchart TD;
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor 太郎
-    actor 花子
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
+    actor みなみ
+    actor かいと
+    actor さちえ
+    actor ゆきと
+    actor じん
+    actor しんぱん
+    みなみ->>かいと: わかさぎ
+    activate かいと
+    かいと-->>みなみ: もう一回！
+    deactivate かいと
+    activate みなみ
+    みなみ->>かいと: わかさぎ
+    deactivate みなみ
+    activate かいと
+    かいと->>さちえ: わかさぎ
+    deactivate かいと
+    activate さちえ
+    さちえ-->>かいと: もう一度！
+    deactivate さちえ
+    activate かいと
+    かいと->>さちえ: わかさぎ
+    deactivate かいと
+    activate さちえ
+    さちえ->>ゆきと: わびさび
+    deactivate さちえ
+    activate ゆきと
+    ゆきと-->>さちえ: ワンモア！
+    deactivate ゆきと
+    activate さちえ
+    さちえ->>ゆきと: わびさび
+    deactivate さちえ
+    activate ゆきと
+    ゆきと->>じん: みやざき
+    deactivate ゆきと
+    activate じん
+    じん-->>ゆきと: 何て？
+    deactivate じん
+    activate ゆきと
+    ゆきと->>じん: みやざき！
+    deactivate ゆきと
+    activate じん
+    じん->>しんぱん: しらさぎ
+    deactivate じん
+    activate しんぱん
+    しんぱん->>みなみ: 「しらさぎ」で合っていますか？
+    deactivate しんぱん
+    activate みなみ
+    みなみ-->>しんぱん: 全然違う！ 
+    deactivate みなみ
 ```
 
 ## クラス図
