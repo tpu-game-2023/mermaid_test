@@ -57,7 +57,6 @@ sequenceDiagram
     actor 高橋
     actor 山田
     佐藤->>高橋: 高橋さん!好きです!
-    loop 思考
     高橋->>高橋:佐藤君の事が好きなのか?
     Note right of 高橋:高橋は山田の事が好き
     高橋-->>佐藤: ごめんなさい!
