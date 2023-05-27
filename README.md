@@ -18,8 +18,16 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart LR;
-  A --> B
+flowchart TD;
+  A([開始]) --> B[商品を受け取る];
+  B --> C[商品をスキャンする];
+  C --> D[お金を受け取る];
+  D --> E{領収書を発行するか};
+  E -- 真 --> F[領収書を発行する];
+  F --> G[お釣りを渡す];
+  E -- 偽 --> H[レシートを発行する];
+  H --> G;
+  G --> I([終了]);  
 ```
 
 ## シーケンス図
@@ -32,12 +40,55 @@ flowchart LR;
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor 太郎
-    actor 花子
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
+    actor みなみ
+    actor かいと
+    actor さちえ
+    actor ゆきと
+    actor じん
+    actor しんぱん
+    みなみ->>かいと: わかさぎ
+    activate かいと
+    かいと-->>みなみ: もう一回！
+    deactivate かいと
+    activate みなみ
+    みなみ->>かいと: わかさぎ
+    deactivate みなみ
+    activate かいと
+    かいと->>さちえ: わかさぎ
+    deactivate かいと
+    activate さちえ
+    さちえ-->>かいと: もう一度！
+    deactivate さちえ
+    activate かいと
+    かいと->>さちえ: わかさぎ
+    deactivate かいと
+    activate さちえ
+    さちえ->>ゆきと: わびさび
+    deactivate さちえ
+    activate ゆきと
+    ゆきと-->>さちえ: ワンモア！
+    deactivate ゆきと
+    activate さちえ
+    さちえ->>ゆきと: わびさび
+    deactivate さちえ
+    activate ゆきと
+    ゆきと->>じん: みやざき
+    deactivate ゆきと
+    activate じん
+    じん-->>ゆきと: 何て？
+    deactivate じん
+    activate ゆきと
+    ゆきと->>じん: みやざき！
+    deactivate ゆきと
+    activate じん
+    じん->>しんぱん: しらさぎ
+    deactivate じん
+    activate しんぱん
+    しんぱん->>みなみ: 「しらさぎ」で合っていますか？
+    deactivate しんぱん
+    activate みなみ
+    みなみ-->>しんぱん: 全然違う！ 
+    deactivate みなみ
 ```
 
 ## クラス図
@@ -50,5 +101,25 @@ sequenceDiagram
 ## 解答
 ```mermaid
 classDiagram
-    キャラクター o-- アイテム
+    プレイヤー <|-- 勇者
+    魔法使い o-- 回復
+    武闘家 o-- 打撃技
+    パーティー o-- プレイヤー
+    パーティー o-- 魔法使い
+    パーティー o-- 武闘家
+    始まりの村 o-- プレイヤー
+    始まりの村 : save()
+    プレイヤー : HP
+    プレイヤー : MP
+    プレイヤー : move()
+    プレイヤー : ask()
+    プレイヤー : search()
+    魔法使い : HP
+    魔法使い : MP
+    魔法使い : sapport()
+    武闘家 : HP
+    武闘家 : MP
+    武闘家 : attack()
+    
+    
 ```
