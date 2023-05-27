@@ -70,14 +70,41 @@ sequenceDiagram
 - カッコいいほど高得点
 
 ## 解答
+- 人間
 ```mermaid
 classDiagram
-    キャラクター o-- アイテム
+   class Human {
+    -string Name
+    -int Age
+    -string Gender
+    -bool Health
+    +checkHealth(Condition) bool
+    }
     
+    class Mental{
+    -int Value
+    -string Condition
+    +getValue(Pvalue, Nvalue) int
+    get Condition(Value) string
+    }
     
+    class Positive{
+    int Pvalue
+    +getPvalue() int
+    }
+
+    class Negative{
+    int Nvalue
+    +getNvalue() int
+    }
     
-    
-    
+    Human o-- Mental
+    Mental <|-- Positive
+    Mental <|-- Negative
+    Negative <|-- A
+    Negative <|-- B
+    Negative <|-- C
+    Negative <|-- D
     
     
     
