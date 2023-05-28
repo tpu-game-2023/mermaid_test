@@ -54,6 +54,14 @@ sequenceDiagram
     activate K
     K-->>M: おはようございまーす！
     deactivate K
+    M->>U: Uちゃん、最近何やった？俺、鬼退治！
+    activate U
+    U-->>M: 僕はカメさんに乗って釣りしてたよ～
+    deactivate U
+    M->>K: Kちゃんは最近何やった？
+    activate K
+    K-->>M: 山の動物たちと相撲してた！
+    deactivate K
 ```
 
 ## クラス図
