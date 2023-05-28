@@ -39,21 +39,21 @@ flowchart LR;
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor 太郎
-    actor 花子
-    acter サトモチ
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
-    太郎->>サトモチ: おはよう！
-    activate サトモチ
-    サトモチ -->>太郎: おはよ～
-    deactivate サトモチ
-    花子->>サトモチ: おはようございます！
-    activate サトモチ
-    サトモチ -->>花子: おはよ～
-    deactivate サトモチ
+  actor 太郎
+  actor 花子
+  acter サトモチ
+  太郎->>花子: おはよう！
+  activate 花子
+  花子-->>太郎: おはようございます!
+  deactivate 花子
+  太郎->>サトモチ: おはよう！
+  activate サトモチ
+  サトモチ -->>太郎: おはよ～
+  deactivate サトモチ
+  花子->>サトモチ: おはようございます！
+  activate サトモチ
+  サトモチ -->>花子: おはよ～
+  deactivate サトモチ
 ```
 
 ## クラス図
