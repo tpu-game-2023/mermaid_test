@@ -50,6 +50,10 @@ sequenceDiagram
     activate U
     U-->>K: おはよお～
     deactivate U
+    M->>K: おはよう！
+    activate K
+    K-->>M: おはようございまーす！
+    deactivate K
 ```
 
 ## クラス図
