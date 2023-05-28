@@ -66,4 +66,6 @@ sequenceDiagram
 ```mermaid
 classDiagram
     キャラクター o-- アイテム
+    敵 o-- アイテム
+    敵　<--> キャラクター
 ```
