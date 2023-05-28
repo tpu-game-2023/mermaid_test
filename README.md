@@ -42,7 +42,6 @@ sequenceDiagram
   actor M
   actor U
   actor K
-  activate M
   M->>U:おはよう！
   activate U
   U-->>M:おはよお～
@@ -51,19 +50,19 @@ sequenceDiagram
   U-->>K:おはよお～
   M->>K:おはよう！
   K-->>K:おはようございまーす！
-  detivate U
-  detivate K
+  deactivate U
+  deactivate K
   M->>U:Uちゃん、最近何やった？俺、鬼退治！
-  detivate M
+  deactivate M
   activate U
   U-->>M:僕はカメさんに乗って釣りしてたよ～
-  detivate U
+  deactivate U
   activate M
   M->>K:Kちゃんは最近何やった？
-  detivate M
+  deactivate M
   activate K
   K-->>M:山の動物たちと相撲してた！
-  detivate K
+  deactivate K
 ```
 
 ## クラス図
