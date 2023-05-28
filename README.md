@@ -19,7 +19,14 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart LR;
-  A --> B
+  A([開始]) --> B[/入力/];
+  B -->C{判断};
+  B -- キャンセル --> G([終了]);
+  C -- 真 --> D[[プログラム実行]];
+  D --> E[[結果表示]];
+  E --> B;
+  C -- 偽 --> F[[エラー表示]];
+  F --> G;
 ```
 
 ## シーケンス図
@@ -32,12 +39,29 @@ flowchart LR;
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor 太郎
-    actor 花子
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
+    actor M
+    actor U
+    actor K
+    M->>U: おはよう！
+    activate U
+    U-->>M: おはよお～
+    deactivate U
+    K->>U: おはようございまーす！
+    activate U
+    U-->>K: おはよお～
+    deactivate U
+    M->>K: おはよう！
+    activate K
+    K-->>M: おはようございまーす！
+    deactivate K
+    M->>U: Uちゃん、最近何やった？俺、鬼退治！
+    activate U
+    U-->>M: 僕はカメさんに乗って釣りしてたよ～
+    deactivate U
+    M->>K: Kちゃんは最近何やった？
+    activate K
+    K-->>M: 山の動物たちと相撲してた！
+    deactivate K
 ```
 
 ## クラス図
@@ -50,5 +74,15 @@ sequenceDiagram
 ## 解答
 ```mermaid
 classDiagram
-    キャラクター o-- アイテム
+    サトモチ o-- アイテム
+    サトモチ :人間
+    サトモチ :１０～２０代
+    アイテム :筆箱
+    アイテム :眼鏡
+    筆箱 *-- 筆記用具
+    筆記用具 :鉛筆
+    筆記用具 :消しゴム
+    筆記用具 :シャープペンシル
+    サトモチ--|>所属
+    所属:大学
 ```
