@@ -19,7 +19,12 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart LR;
-  A --> B
+  A([開始]) --> B[/入力/];
+  B --> C{判断};
+  C -- 真 --> D[[サブルーチン]];
+  D --> B;
+  C -- 偽 --> F[表示];
+  F --> E([終了]);
 ```
 
 ## シーケンス図
@@ -34,10 +39,15 @@ flowchart LR;
 sequenceDiagram
     actor 太郎
     actor 花子
+    actor 一郎
     太郎->>花子: おはよう！
     activate 花子
     花子-->>太郎: おはようございます!
+    activate 一郎
+    一郎->>花子: こんにちは!
+    花子-->>一郎: こんにちは！
     deactivate 花子
+    deactivate 一郎
 ```
 
 ## クラス図
@@ -51,4 +61,15 @@ sequenceDiagram
 ```mermaid
 classDiagram
     キャラクター o-- アイテム
+    アイテム o-- 道具
+    アイテム o-- 武器
+    武器 <|-- 剣
+    武器 <|-- 弓
+    道具 <|-- つるはし
+    道具 <|-- スコップ
+    キャラクター o-- プレイヤー
+    キャラクター　o-- 敵兵士
+    敵兵士 <|-- 弓兵
+    敵兵士 <|-- 歩兵
+    
 ```
