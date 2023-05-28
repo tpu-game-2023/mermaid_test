@@ -47,6 +47,7 @@ sequenceDiagram
     花子-->>John: ジョンはどうですか？
     loop Healthcheck
         John-->>John: 超元気ちゃうか俺？
+    end
     John-->>花子:超元気みたいやわ俺
     花子-->>John:それはよかった     
     deactivate 花子
