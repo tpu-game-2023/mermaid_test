@@ -41,9 +41,14 @@ flowchart LR;
 sequenceDiagram
     actor M
     actor U
+    actor K
     M->>U: おはよう！
     activate U
     U-->>M: おはよお～
+    deactivate U
+    K->>U: おはようございまーす！
+    activate U
+    U-->>K: おはよお～
     deactivate U
 ```
 
