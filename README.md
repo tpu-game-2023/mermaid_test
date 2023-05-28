@@ -18,8 +18,13 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart LR;
-  A --> B
+flowchart LR
+ A([開始]) --> B[/攻撃/]
+  B --> C{判定}
+  C -- ヒット --> D[[ダメージ]]
+  D --> E([撃破])
+  C -- 回避 --> F[ミス]
+  F --> B
 ```
 
 ## シーケンス図
@@ -34,10 +39,27 @@ flowchart LR;
 sequenceDiagram
     actor 太郎
     actor 花子
+    actor 幸子
     太郎->>花子: おはよう！
     activate 花子
-    花子-->>太郎: おはようございます!
+    花子-->>太郎: おっ!おはよ！
+    activate 幸子
+     幸子-->>花子: あら、今日は早いのね。
+    花子->>幸子:あ！おはよ！今日の一時間目なんだっけ？
+    幸子-->>花子: 日本語表現だったと思うわ。
+    花子-->>幸子:だよね～！忘れたから見せてくれない？
     deactivate 花子
+    幸子-->>花子: はあ……
+    deactivate 幸子
+    activate 太郎
+    太郎-->>花子: おいおいまたかよ……
+    deactivate 太郎
+    activate 幸子
+    幸子-->>太郎:太郎君お願いね。
+    deactivate 幸子
+    activate 太郎
+      太郎->>幸子: はい…
+    deactivate 太郎
 ```
 
 ## クラス図
@@ -50,5 +72,15 @@ sequenceDiagram
 ## 解答
 ```mermaid
 classDiagram
-    キャラクター o-- アイテム
+      class プレイヤー {
+    主人公
+    相棒
+  }
+  class エネミー {
+    突撃兵
+    援護兵
+  }
+  キャラクター *-- プレイヤー : 凡化
+  キャラクター *-- エネミー: 凡化
+  キャラクター --o ゲームシステム : 集約
 ```
