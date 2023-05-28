@@ -38,10 +38,10 @@ flowchart LR;
 
 ## 解答
 ```mermaid
-sequenceDiagram;
+sequenceDiagram
   actor M
   actor U
-  acter K
+  actor K
   M->>+U:おはよう！
   activate U
   U-->>-M:おはよお～
