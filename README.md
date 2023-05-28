@@ -44,8 +44,8 @@ sequenceDiagram
     activate 花子
     花子-->>太郎: おはようございます!
     activate 一郎
-    一郎->>花子: 今日は良い陽気ですね!
-    花子-->>一郎: そうですね！
+    一郎->>花子: こんにちは!
+    花子-->>一郎: こんにちは！
     deactivate 花子
     deactivate 一郎
 ```
