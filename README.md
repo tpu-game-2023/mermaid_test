@@ -18,8 +18,14 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart LR;
-  A --> B
+flowchart TD;
+  A(開始) --> B[/お腹がすく/];
+  B --> C[レシピ決まってるか];
+  C -- 決まってる --> D[ご飯にありつける];
+  C -- 決まってない --> E[ごはん抜き];
+  D --> F(終了);
+  E --> F; 
+
 ```
 
 ## シーケンス図
@@ -34,9 +40,18 @@ flowchart LR;
 sequenceDiagram
     actor 太郎
     actor 花子
-    太郎->>花子: おはよう！
+    太郎->>花子: おはよう！元気？
     activate 花子
-    花子-->>太郎: おはようございます!
+    花子-->>太郎: おはようございます!元気です！そちらはどうですか？
+    太郎-->>花子: 私も元気です。
+    花子-->>John: ジョンはどうですか？
+    loop Healthcheck
+        John-->>John: 超元気ちゃうか俺？
+    end
+    John-->>花子:超元気みたいやわ俺
+    花子-->>John:それはよかった
+    John-->>太郎:太郎も元気そうだね
+    太郎-->>John:せやで、超元気     
     deactivate 花子
 ```
 
@@ -51,4 +66,6 @@ sequenceDiagram
 ```mermaid
 classDiagram
     キャラクター o-- アイテム
+    敵 o-- アイテム
+    敵　<--> キャラクター
 ```
