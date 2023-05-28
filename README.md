@@ -72,5 +72,11 @@ sequenceDiagram
 ## 解答
 ```mermaid
 classDiagram
+    direcrtion TD
+Class キャラクター
     キャラクター o-- アイテム
+    プレイヤー <|--　キャラクター
+    スライム <|--　キャラクター
+    ドラゴン<|--　キャラクター
+    スライムの群れ"3" *--"1" スライム
 ```
