@@ -50,10 +50,16 @@ flowchart LR;
 sequenceDiagram
     actor 太郎
     actor 花子
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
+    participant 翻訳機
+    actor ボブ
+    太郎->>+花子: おはよう！
+    花子-->>-太郎: おはようございます!
+    太郎->>+翻訳機: おはよう！
+    翻訳機-->>翻訳機: 翻訳中
+    翻訳機-->>-ボブ:Good morning
+    ボブ-->>+翻訳機:Good morning
+    翻訳機-->>翻訳機: 翻訳中
+    翻訳機-->>-太郎: おはよう
 ```
 
 ## クラス図
