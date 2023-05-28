@@ -40,9 +40,15 @@ flowchart TD;
 sequenceDiagram
     actor 太郎
     actor 花子
-    太郎->>花子: おはよう！
+    太郎->>花子: おはよう！元気？
     activate 花子
-    花子-->>太郎: おはようございます!
+    花子-->>太郎: おはようございます!元気です！そちらはどうですか？
+    太郎-->>花子: 私も元気です。
+    花子-->>John: ジョンはどうですか？
+    loop Healthcheck
+        John-->>John: 超元気ちゃうか俺？
+    John-->>花子:超元気みたいやわ俺
+    花子-->>John:それはよかった     
     deactivate 花子
 ```
 
