@@ -69,7 +69,7 @@ classDiagram
     アイテム <|-- 装備
     アイテム <|-- 道具
     アイテム <|-- 素材
-    ステータス : 
+    ステータス : string name
     ステータス : int HP
     ステータス : int MP
     ステータス : int STR
