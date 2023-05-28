@@ -72,7 +72,7 @@ sequenceDiagram
 ## 解答
 ```mermaid
 classDiagram
-    direcrtion DT
+    direcrtion TD
 Class キャラクター
     キャラクター o-- アイテム
     プレイヤー <|--　キャラクター
