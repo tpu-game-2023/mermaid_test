@@ -65,4 +65,15 @@ sequenceDiagram
 ```mermaid
 classDiagram
     キャラクター o-- アイテム
+    キャラクター o-- ステータス
+    アイテム <|-- 装備
+    アイテム <|-- 道具
+    アイテム <|-- 素材
+    ステータス : 
+    ステータス : int HP
+    ステータス : int MP
+    ステータス : int STR
+    ステータス : int VIT
+    ステータス : int INT
+    ステータス : int AGI
 ```
