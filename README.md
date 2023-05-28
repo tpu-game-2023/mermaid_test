@@ -18,7 +18,7 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart LR;
+flowchart TD;
   A([開始]) --> B[/手を洗う/];
   B --> C{レシピを決めたか};
   C -- 真 --> D[料理はじめ！];
