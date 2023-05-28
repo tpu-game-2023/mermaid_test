@@ -38,7 +38,7 @@ flowchart LR;
 
 ## 解答
 ```mermaid
-sequenceDiagram
+sequenceDiagram;
   actor M
   actor U
   acter K
@@ -52,6 +52,17 @@ sequenceDiagram
   M->>+K:おはよう！
   activate K
   K-->>-K:おはようございまーす！
+  M->>+U:Uちゃん、最近何やった？俺、鬼退治！
+  detivate M
+  activate U
+  U-->>-M:僕はカメさんに乗って釣りしてたよ～
+  detivate U
+  activate M
+  M->>+K:Kちゃんは最近何やった？
+  detivate M
+  activate K
+  K-->>-M:山の動物たちと相撲してた！
+  detivate K
 ```
 
 ## クラス図
