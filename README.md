@@ -46,9 +46,9 @@ sequenceDiagram
   activate U
   U-->>-M:おはよお～
   activate K
-  K->>++U:おはようございまーす！
+  K->>+U:おはようございまーす！
   activate U
-  U-->>--K:おはよお～
+  U-->>-K:おはよお～
   M->>+K:おはよう！
   activate K
   K-->>-K:おはようございまーす！
