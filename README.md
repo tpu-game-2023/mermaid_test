@@ -49,7 +49,9 @@ sequenceDiagram
         John-->>John: 超元気ちゃうか俺？
     end
     John-->>花子:超元気みたいやわ俺
-    花子-->>John:それはよかった     
+    花子-->>John:それはよかった
+    John-->>太郎:太郎も元気そうだね
+    太郎-->>John:せやで、超元気     
     deactivate 花子
 ```
 
