@@ -39,29 +39,29 @@ flowchart LR;
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor M郎
-    actor U郎
-    acter K郎
-    M郎->>+U郎:おはよう！
-    activate U郎
-    U郎-->>-M郎:おはよお～
-    activate K郎
-    K郎->>+U郎:おはようございまーす！
-    activate U郎
-    U郎-->>-K郎:おはよお～
-    M郎->>+K郎:おはよう！
-    activate K郎
-    K郎-->>-K郎:おはようございまーす！
-    M郎->>+U郎:Uちゃん、最近何やった？俺、鬼退治！
-    detivate M郎
-    activate U郎
-    U郎-->>-M郎:僕はカメさんに乗って釣りしてたよ～
-    detivate U郎
-    activate M郎
-    M郎->>+K郎:Kちゃんは最近何やった？
-    detivate M郎
-    activate K郎
-    K郎-->>-M郎:山の動物たちと相撲してた！
+actor M郎
+actor U郎
+acter K郎
+M郎->>+U郎:おはよう！
+activate U郎
+U郎-->>-M郎:おはよお～
+activate K郎
+K郎->>+U郎:おはようございまーす！
+activate U郎
+U郎-->>-K郎:おはよお～
+M郎->>+K郎:おはよう！
+activate K郎
+K郎-->>-K郎:おはようございまーす！
+M郎->>+U郎:Uちゃん、最近何やった？俺、鬼退治！
+detivate M郎
+activate U郎
+U郎-->>-M郎:僕はカメさんに乗って釣りしてたよ～
+detivate U郎
+activate M郎
+M郎->>+K郎:Kちゃんは最近何やった？
+detivate M郎
+activate K郎
+K郎-->>-M郎:山の動物たちと相撲してた！
 ```
 
 ## クラス図
