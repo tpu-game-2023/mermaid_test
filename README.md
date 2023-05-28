@@ -41,28 +41,10 @@ flowchart LR;
 sequenceDiagram
     actor M
     actor U
-    actor K
     M->>U: おはよう！
     activate U
     U-->>M: おはよお～
-    activate K
-    K->>U: おはようございまーす！
-    U-->>K: おはよお～
-    M->>K: おはよう！
-    K-->>M: おはようございまーす！
     deactivate U
-    deactivate K
-    M->>U: Uちゃん、最近何やった？俺、鬼退治！
-    deactivate M
-    activate U
-    U-->>M: 僕はカメさんに乗って釣りしてたよ～
-    deactivate U
-    activate M
-    M->>K: Kちゃんは最近何やった？
-    deactivate M
-    activate K
-    K-->>M: 山の動物たちと相撲してた！
-    deactivate K
 ```
 
 ## クラス図
