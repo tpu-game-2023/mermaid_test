@@ -19,7 +19,7 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart TD;
-  A --> B;
+  A(開始) --> B[/ご飯食べたい/];
   B --> C;
   C -- 真 --> D;
   C -- 偽 --> E;
