@@ -18,10 +18,21 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart LR;
-  A --> B --> C
-  C -->  A
-  C --> D --> E  
+flowchart TD;
+  A[熟睡] --> B[電話が鳴る];
+  B --> C([出る]);
+  B --> D([出ない]);
+  D --> E((二度寝する));
+  C --> F[起こしてほしい];
+  F --> G((断る));
+  F --> H([承諾する]);
+  G --> E;
+  H -- 起こす --> I[朝ご飯を食べに行こう];
+  I --> J([行く]);
+  I --> K((行かない));
+  E --> L{目が覚める};
+  J --> L;
+  K --> L;
 ```
 
 ## シーケンス図
@@ -34,12 +45,10 @@ flowchart LR;
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor 太郎
-    actor 花子
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
+     actor 花子
+  
+actor 太郎
+花子 ->> 太郎:おはよう
 ```
 
 ## クラス図
