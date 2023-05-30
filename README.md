@@ -19,7 +19,7 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart LR;
-  A --> B
+  id((開始)) --> A --> B --> id((終了))
 ```
 
 ## シーケンス図
