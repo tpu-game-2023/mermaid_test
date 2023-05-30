@@ -40,10 +40,20 @@ flowchart LR;
 sequenceDiagram
     actor 太郎
     actor 花子
+    actor 悠斗
+    actor 雄太
     太郎->>花子: おはよう！
     activate 花子
     花子-->>太郎: おはようございます!
     deactivate 花子
+    花子->>悠斗: 調子はどう？
+    activate 悠斗
+    悠斗-->>花子: 絶好調だよ！
+    deactivate 悠斗
+    悠斗->>雄太: 昨日の野球見た？
+    activate 雄太
+    雄太-->>悠斗: 凄かったよね
+    deactivate 雄太
 ```
 
 ## クラス図
