@@ -19,10 +19,8 @@ Mermaidを触ってみよう
 ## 解答
 ```mermaid
 flowchart LR;
-  bigin((開始)) --> A
-  A --> end((終了))
-  begin((開始)) --> B 
-  B --> end((終了))
+  bigin((開始)) --> A --> end((終了))
+  begin((開始)) --> B --> end((終了))
 ```
 
 ## シーケンス図
