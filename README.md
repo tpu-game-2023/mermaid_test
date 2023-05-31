@@ -18,8 +18,16 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart LR;
-  A --> B
+graph TD;
+  start[コンビニに行く] --> B{夜ご飯を食べたか?};
+  B -- 食べた --> C{たけのこ派 or きのこ派?};
+  B -- 食べていない --> D[からあげクン ポカポカ草の実味を選ぶ];
+  C -- たけのこ派 --> E[たけのこの里を選ぶ];
+  C -- きのこ派 --> F[きのこの里を選ぶ];
+  E --> G[レジで注文する]
+  F --> G
+  D --> G
+  G --> finish[コンビニから出る];
 ```
 
 ## シーケンス図
@@ -33,11 +41,10 @@ flowchart LR;
 ```mermaid
 sequenceDiagram
     actor 太郎
+    actor 次郎
     actor 花子
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
+    
+    
 ```
 
 ## クラス図
