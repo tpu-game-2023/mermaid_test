@@ -40,11 +40,22 @@ graph TD;
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor 太郎
-    actor 次郎
-    actor 花子
-    
-    
+    actor taro as 太郎
+    actor hanako as 花子
+    actor jiro as 次郎
+
+    taro->>jiro: 俺花子のことが好きなんだ
+    jiro->>taro: そうなんだ！応援してるね
+    taro->>hanako: ディズニーに誘う
+    hanako->>taro: いいよ！
+    jiro->>+hanako: ディズニーに誘う
+    hanako->>hanako: やっぱり次郎くんと行きたい...
+    hanako->>taro: ごめん、外せない予定が入った
+    taro->>hanako: 仕方ないね、わかった
+    hanako->>-jiro: いいよ！
+    taro->>jiro: 花子にデート断られた...
+    jiro->>taro: そっか～ 映画館に誘ってみれば？
+    taro->>jiro: いいね！次郎くんありがとう  
 ```
 
 ## クラス図
@@ -57,5 +68,31 @@ sequenceDiagram
 ## 解答
 ```mermaid
 classDiagram
-    キャラクター o-- アイテム
+direction LR
+
+class アイス{
+  名前
+}
+
+class 成分{
+  乳固形分
+  乳脂肪分割合
+}
+
+
+
+  アイス *-- 成分
+  アイス o-- パッケージ
+  成分 <|.. アイスクリーム
+  成分 <|.. アイスミルク
+  成分 <|.. ラクトアイス
+  成分 <|.. 氷菓
+
+  アイス <|-- アイスクリームコーン
+  アイスクリームコーン o-- コーン
+  コーン <|-- レギュラーコーン
+  コーン <|-- ワッフルコーン
+
+  アイス <|-- 棒アイス
+  アイス <|-- カップアイス 
 ```
