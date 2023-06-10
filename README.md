@@ -127,11 +127,11 @@ class StudentB{
 }
 
 
-    Subject "1" o-- "1..*" チーム制作1
-    チーム制作1 "1"　<|-- "1..*" Team
-    Team "1" o-- "1..*" Planning 
-    Team "1" o-- "1..*" Design
-    Team "1" o-- "1..*" Program
+    Subject "1" <|-- "1..*" チーム制作1
+    チーム制作1 "1"　o-- "1..*" Team
+    Team "1" <|-- "1..*" Planning 
+    Team "1" <|-- "1..*" Design
+    Team "1" <|-- "1..*" Program
     Planning　"1" <|-- "1" StudentA:所属する
     Program　"1" <|-- "1" StudentB:所属する
 ```
