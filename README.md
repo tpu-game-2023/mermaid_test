@@ -18,9 +18,16 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-flowchart LR;
-  A -> B
 
+  A --> B
+flowchart TD;
+A[開始] --> B[ノード1]
+B --> C{条件分岐}
+C --> |条件A成立| D[ノード2]
+C --> |条件A不成立| E[ノード3]
+D --> F[ノード4]
+E --> F
+F --> G[終了]
 
 ```
 
