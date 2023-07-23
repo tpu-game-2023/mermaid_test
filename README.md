@@ -40,7 +40,7 @@ G --> H[終了]
 ## 解答
 ```mermaid
 sequenceDiagram
-     participant A as  A
+     participant A as Person A
     participant B as  B
     participant C as  C
 
