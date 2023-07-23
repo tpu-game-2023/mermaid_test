@@ -67,7 +67,7 @@ sequenceDiagram
 ```mermaid
 classDiagram
     class キャラクター {
-        +名前: 文字列
+        +名前: RIO
         +体力: 数値
         +攻撃力: 数値
         +防御力: 数値
@@ -76,8 +76,8 @@ classDiagram
     }
 
     class アイテム {
-        +名前: 文字列
-        +効果: 文字列
+        +名前: 課題
+        +効果: 点数を与える
     }
 
     キャラクター <|-- プレイヤーキャラクター : 汎化
