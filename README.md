@@ -18,8 +18,6 @@ Mermaidを触ってみよう
 
 ## 解答
 ```mermaid
-
-  A --> B
 flowchart TD;
 A[開始] --> B[ノード1]
 B --> C{条件分岐}
