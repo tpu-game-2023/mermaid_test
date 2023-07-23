@@ -40,9 +40,9 @@ G --> H[終了]
 ## 解答
 ```mermaid
 sequenceDiagram
-     participant A as Person A
-    participant B as Person B
-    participant C as Person C
+     participant A as  A
+    participant B as  B
+    participant C as  C
 
     A ->> A: 自己呼び出し
 
