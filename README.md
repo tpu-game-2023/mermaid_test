@@ -40,12 +40,20 @@ G --> H[終了]
 ## 解答
 ```mermaid
 sequenceDiagram
-    actor 太郎
-    actor 花子
-    太郎->>花子: おはよう！
-    activate 花子
-    花子-->>太郎: おはようございます!
-    deactivate 花子
+     participant A as Person A
+    participant B as Person B
+    participant C as Person C
+
+    A ->> A: 自己呼び出し
+
+    A ->> B: メッセージ1
+    B ->> A: メッセージ2
+
+    A ->> C: メッセージ3
+    C ->> A: メッセージ4
+
+    B ->> C: メッセージ5
+    C ->> B: メッセージ6
 ```
 
 ## クラス図
