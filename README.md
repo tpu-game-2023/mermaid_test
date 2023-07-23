@@ -66,32 +66,6 @@ sequenceDiagram
 ## 解答
 ```mermaid
 classDiagram
-  class Person {
-    - name: string
-    - age: int
-    + introduce(): void
-  }
-  
-  class Student {
-    - studentId: string
-    + study(): void
-  }
-  
-  class Teacher {
-    - teacherId: string
-    + teach(): void
-  }
-  
-  Person <|-- Student
-  Person <|-- Teacher
-  
-  class University {
-    - name: string
-    - location: string
-    + enrollStudent(student: Student): void
-    + hireTeacher(teacher: Teacher): void
-  }
-  
-  Person "1" *-up- "1" University
+    キャラクター o-- アイテム
 
 ```
